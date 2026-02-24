@@ -1,59 +1,45 @@
-# FirstAngular20Project
+# First Angular 20 Project
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.17.
+一個基於 Angular 20 的專案框架，包含完整的開發環境設定。
 
-## Development server
+## 技術棧
 
-To start a local development server, run:
+- Angular 20
+- Angular Material
+- TypeScript
+- SCSS
 
+## 開發工具設定
+
+- **ESLint**：程式碼品質檢查
+- **Prettier**：程式碼格式化
+- **Husky**：Git pre-commit hook
+- **lint-staged**：只檢查有改動的檔案
+
+## 開始使用
+
+### 安裝依賴
+```bash
+npm install
+```
+
+### 啟動開發伺服器
 ```bash
 ng serve
 ```
+開啟 `http://localhost:4200`
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+### 程式碼檢查
 ```bash
-ng generate component component-name
+ng lint
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
+### 程式碼格式化
 ```bash
-ng generate --help
+npm run format
 ```
 
-## Building
-
-To build the project run:
-
+### 格式檢查
 ```bash
-ng build
+npm run format:check
 ```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
