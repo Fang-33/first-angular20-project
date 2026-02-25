@@ -1,0 +1,120 @@
+:root {
+  // ============================================
+  // EunoAI Design System - Color Palette
+  // ============================================
+
+  // === Neutral Colors ===
+  --neutral-900: #0b1215;
+  --neutral-800: #444b56;
+  --neutral-700: #69717e;
+  --neutral-600: #838d99;
+  --neutral-500: #a0a8b2;
+  --neutral-400: #b9bfc7;
+  --neutral-300: #ced4dc;
+  --neutral-200: #e0e6ee;
+  --neutral-100: #eff3f9;
+  --neutral-50: #f9fbfe;
+  --white: #ffffff;
+
+  // === Primary Colors ===
+  --primary-900: #042e80;
+  --primary-800: #0039a6;
+  --primary-700: #0042c2;
+  --primary-600: #004fe6;
+  --primary-500: #0057ff; // Base
+  --primary-400: #347aff;
+  --primary-300: #73a3ff;
+  --primary-200: #afcaff;
+  --primary-100: #d2e3ff;
+  --primary-50: #f0f5ff;
+
+  // Primary Accent
+  --primary-a700: #1b49ff;
+  --primary-a400: #365eff;
+  --primary-a200: #597aff;
+  --primary-a100: #8ca3ff;
+
+  // === Auxiliary Colors ===
+  --auxiliary-900: #00237e;
+  --auxiliary-800: #063693; // Base
+  --auxiliary-700: #153f9f;
+  --auxiliary-600: #2149ab;
+  --auxiliary-500: #2850b5;
+  --auxiliary-400: #4f6abf;
+  --auxiliary-300: #7085ca;
+  --auxiliary-200: #99a7d9;
+  --auxiliary-100: #c2c9e8;
+  --auxiliary-50: #e7eaf6;
+
+  // === Semantic Colors ===
+
+  // --- Danger / Red ---
+  --red-900: #911200;
+  --red-800: #b11600;
+  --red-700: #cd1900;
+  --red-600: #e51c00; // Base
+  --red-500: #f64229;
+  --red-400: #ff6c57;
+  --red-300: #ff9486;
+  --red-200: #ffbbb2;
+  --red-100: #fee1de;
+  --red-50: #fff7f6;
+
+  // Red Accent
+  --red-a700: #d50000;
+  --red-a400: #ff1717;
+  --red-a200: #ff5252;
+  --red-a100: #ff8a80;
+
+  // --- Warning / Golden ---
+  --golden-900: #ea7419;
+  --golden-800: #f28a04;
+  --golden-700: #ffa000;
+  --golden-600: #ffb300; // Base
+  --golden-500: #ffc107;
+  --golden-400: #ffca28;
+  --golden-300: #ffd54f;
+  --golden-200: #ffe186;
+  --golden-100: #fff0c2;
+  --golden-50: #fffbef;
+
+  // Golden Accent
+  --golden-a700: #ffac03;
+  --golden-a400: #ffc400;
+  --golden-a200: #ffd740;
+  --golden-a100: #ffe57f;
+
+  // --- Success / Green ---
+  --green-900: #005a0f;
+  --green-800: #007213;
+  --green-700: #009419;
+  --green-600: #00b21e; // Base
+  --green-500: #02ca24;
+  --green-400: #32dc4f;
+  --green-300: #73e686;
+  --green-200: #a6fab4;
+  --green-100: #d7ffde;
+  --green-50: #f1fff4;
+
+  // Green Accent
+  --green-a700: #00c853;
+  --green-a400: #00e676;
+  --green-a200: #69f0ae;
+  --green-a100: #b9f6ca;
+
+  // ============================================
+  // Semantic Aliases (for backward compatibility)
+  // ============================================
+  --color-primary: var(--primary-500);
+  --color-success: var(--green-600);
+  --color-warning: var(--golden-600);
+  --color-error: var(--red-500);
+
+  --color-text-primary: var(--neutral-900);
+  --color-text-secondary: var(--neutral-700);
+  --color-text-disabled: var(--neutral-500);
+
+  --color-border: var(--neutral-300);
+  --color-background: var(--neutral-50);
+  --color-surface: var(--white);
+}
