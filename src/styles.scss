@@ -4,6 +4,7 @@
 @use 'styles/variables';
 @use 'styles/colors';
 @use 'styles/typography';
+@use 'styles/scrollbar';
 
 html {
   @include mat.theme(

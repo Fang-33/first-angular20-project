@@ -1,0 +1,66 @@
+/**********
+  hover 才顯示 scrollbar
+**********/
+.--show-scrollbar {
+  overflow: auto;
+  width: 100%;
+
+  ::-webkit-scrollbar-corner {
+    background-color: var(--white);
+  }
+
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--white);
+    border-radius: 0px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 50px;
+  }
+
+  &:hover::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: var(--neutral-400);
+  }
+
+  &:hover::-webkit-scrollbar-track {
+    background: var(--white);
+  }
+}
+
+/**********
+永遠顯示 scrollbar
+**********/
+.--show-scrollbar-always {
+  overflow: auto;
+  width: 100%;
+
+  ::-webkit-scrollbar-corner {
+    background-color: var(--white);
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--white);
+    border-radius: 0px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--neutral-400);
+    border-radius: 50px;
+  }
+}
