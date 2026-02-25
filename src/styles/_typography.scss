@@ -1,0 +1,143 @@
+// ============================================
+// _typography.scss
+// EunoAI Design System Typography Configuration
+// Font Family: Inter | Major Second Scale (1.125)
+// ============================================
+
+p {
+  margin: 0;
+}
+
+// Headers
+h1,
+.h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+h2,
+.h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+h3,
+.h3 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+h4,
+.h4 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+h5,
+.h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+// Subtitles
+.subtitle-1 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.subtitle-2 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.subtitle-3 {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+// Body
+.body-1 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.body-2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.body-3 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+// Captions
+.caption-1 {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.caption-2 {
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 110%;
+}
+
+// Links
+.link-1 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  text-decoration: underline;
+}
+
+.link-2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+  text-decoration: underline;
+}
+
+.link-3 {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 120%;
+  text-decoration: underline;
+}
+
+// Buttons
+.button-1 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.button-2 {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+// Menu
+.menu {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 120%;
+}

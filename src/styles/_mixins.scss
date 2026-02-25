@@ -1,0 +1,57 @@
+// ============================================
+// 要使用到這個的元件要自己加 @use
+// @use '../../../styles/mixins' as *;
+// 如果覺得每個元件都要加很麻煩，可以在 angular.json 的 stylePreprocessorOptions 設定路徑別名，這樣就可以用簡短的路徑：
+// "stylePreprocessorOptions": {
+//   "includePaths": ["src"]
+// }
+// 然後元件裡就可以這樣寫：
+// @use 'styles/mixins' as *;  // 不用管相對路徑
+// (已使用這個方法)
+// ============================================
+
+// ============================================
+// 不用 mixin，每個元件都要重複寫這三行
+// display: flex;
+// align-items: center;
+// justify-content: center;
+
+// 用 mixin，一行搞定
+// @include flex-center;
+// ============================================
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// ============================================
+// 用法
+// .my-component {
+//   font-size: 16px;
+
+//   @include responsive('sm') {
+//     font-size: 14px;
+//   }
+
+//   @include responsive('md') {
+//     font-size: 15px;
+//   }
+// }
+// ============================================
+@mixin responsive($breakpoint) {
+  @if $breakpoint == 'sm' {
+    @media (max-width: 600px) {
+      @content;
+    }
+  } @else if $breakpoint == 'md' {
+    @media (max-width: 960px) {
+      @content;
+    }
+  } @else if $breakpoint == 'lg' {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  }
+}

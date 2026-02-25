@@ -1,0 +1,64 @@
+// 顏色定義
+$color-families: (
+  // Primary 系列
+  'primary-': (50, 100, 200, 300, 400, 500, 600, 700, 800, 900),
+  'primary-a': (100, 200, 400, 700),
+  // Neutral 系列
+  'neutral-': (50, 100, 200, 300, 400, 500, 600, 700, 800, 900),
+  // Auxiliary 系列
+  'auxiliary-': (50, 100, 200, 300, 400, 500, 600, 700, 800, 900),
+  // Red 系列
+  'red-': (50, 100, 200, 300, 400, 500, 600, 700, 800, 900),
+  'red-a': (100, 200, 400, 700),
+  // Green 系列
+  'green-': (50, 100, 200, 300, 400, 500, 600, 700, 800, 900),
+  'green-a': (100, 200, 400, 700),
+  // Golden 系列
+  'golden-': (50, 100, 200, 300, 400, 500, 600, 700, 800, 900),
+  'golden-a': (100, 200, 400, 700)
+);
+
+// 單一顏色
+$single-colors: ('white');
+
+// 生成所有顏色的 utility classes
+@each $family, $shades in $color-families {
+  @each $shade in $shades {
+    $name: #{$family}#{$shade};
+
+    .text-#{$name} {
+      color: var(--#{$name}) !important;
+    }
+
+    .bg-#{$name} {
+      background-color: var(--#{$name}) !important;
+    }
+
+    .hover-text-#{$name}:hover {
+      color: var(--#{$name}) !important;
+    }
+
+    .hover-bg-#{$name}:hover {
+      background-color: var(--#{$name}) !important;
+    }
+  }
+}
+
+// 生成單一顏色類別
+@each $name in $single-colors {
+  .text-#{$name} {
+    color: var(--#{$name}) !important;
+  }
+
+  .bg-#{$name} {
+    background-color: var(--#{$name}) !important;
+  }
+
+  .hover-text-#{$name}:hover {
+    color: var(--#{$name}) !important;
+  }
+
+  .hover-bg-#{$name}:hover {
+    background-color: var(--#{$name}) !important;
+  }
+}
