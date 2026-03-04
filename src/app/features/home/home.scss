@@ -1,0 +1,6 @@
+@use 'mixins' as *;
+
+.layout {
+  @include flex-center;
+  padding: 24px;
+}
