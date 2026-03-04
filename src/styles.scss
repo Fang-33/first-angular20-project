@@ -28,3 +28,16 @@ body {
   background-color: var(--mat-sys-surface);
   color: var(--mat-sys-on-surface);
 }
+
+// ===== 自訂 =====
+.layout {
+  padding: 24px;
+}
+
+.content-container {
+  background-color: var(--white);
+  border-radius: 6px;
+  padding: 24px 16px;
+  border: 0.5px solid var(--neutral-200);
+  box-shadow: 0px 2px 4px 0px #0000000f;
+}
