@@ -1,1 +1,20 @@
-<p>flow-builder works!</p>
+<div class="canvas" #canvasEl>
+  <!-- SVG 層：畫連線用 -->
+  <svg class="connections-svg" #connectionsSvg>
+    <!-- 箭頭定義 -->
+    <defs>
+      <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <polygon points="0 0, 6 3, 0 6" fill="#6c63ff" />
+      </marker>
+    </defs>
+    <defs>...</defs>
+    <g #connectionsGroup></g>
+    <!-- 正式連線 -->
+    <g #tempGroup></g>
+    <!-- 虛線預覽 -->
+  </svg>
+
+  <!-- 節點層 -->
+  <app-flow-node nodeId="node-1" nodeLabel="Node 1" (nodeDragged)="onNodeDragged()" />
+  <app-flow-node nodeId="node-2" nodeLabel="Node 2" (nodeDragged)="onNodeDragged()" />
+</div>
