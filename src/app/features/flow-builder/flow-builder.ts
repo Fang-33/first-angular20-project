@@ -80,6 +80,11 @@ export class FlowBuilder implements OnInit, OnDestroy {
     return `M ${start.x},${start.y} C ${cp1x},${start.y} ${cp2x},${end.y} ${end.x},${end.y}`;
   }
 
+  onNodeDragged() {
+    const connections = this.connectionService.connections();
+    this.renderConnections(connections);
+  }
+
   // ===== catch event functions =====
   private startTempLine(from: ConnectionPoint) {
     const canvasRect = this.canvasEl().nativeElement.getBoundingClientRect();

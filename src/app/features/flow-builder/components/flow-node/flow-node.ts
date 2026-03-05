@@ -1,5 +1,5 @@
 import { CdkDrag } from '@angular/cdk/drag-drop';
-import { Component, inject, input } from '@angular/core';
+import { Component, inject, input, output } from '@angular/core';
 import { Connection } from '../../service/connection';
 
 @Component({
@@ -21,6 +21,7 @@ export class FlowNode {
   nodeLabel = input.required<string>();
 
   // ===== signal output =====
+  nodeDragged = output();
 
   // ===== prop & const =====
 

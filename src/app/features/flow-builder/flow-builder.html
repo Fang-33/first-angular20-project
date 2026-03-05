@@ -15,6 +15,6 @@
   </svg>
 
   <!-- 節點層 -->
-  <app-flow-node nodeId="node-1" nodeLabel="Node 1" />
-  <app-flow-node nodeId="node-2" nodeLabel="Node 2" />
+  <app-flow-node nodeId="node-1" nodeLabel="Node 1" (nodeDragged)="onNodeDragged()" />
+  <app-flow-node nodeId="node-2" nodeLabel="Node 2" (nodeDragged)="onNodeDragged()" />
 </div>

@@ -1,5 +1,5 @@
 <div class="layout">
-  <div class="node" cdkDrag>
+  <div class="node" cdkDrag (cdkDragMoved)="nodeDragged.emit()">
     <div #portElL class="port" (mousedown)="onPortMouseDown($event, portElL)"></div>
     <div class="node-1" cdkDragHandle>{{ nodeLabel() }}</div>
     <div #portElR class="port" (mousedown)="onPortMouseDown($event, portElR)"></div>
