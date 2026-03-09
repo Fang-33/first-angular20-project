@@ -1,0 +1,37 @@
+<mat-sidenav-container autosize="true">
+  <!-- chat list -->
+  <mat-sidenav [opened]="isPanelOpen()" [mode]="sidenavMode()">
+    <mat-nav-list>
+      <a class="chat-nav-link">
+        <mat-icon svgIcon="search" />
+        <span>new chat</span>
+      </a>
+      <a class="chat-nav-link">
+        <mat-icon svgIcon="search" />
+        <span>new chat</span>
+      </a>
+      <a class="chat-nav-link">
+        <mat-icon svgIcon="search" />
+        <span>new chat</span>
+      </a>
+      <a class="chat-nav-link">
+        <mat-icon svgIcon="search" />
+        <span>new chat</span>
+      </a>
+      <a class="chat-nav-link">
+        <mat-icon svgIcon="search" />
+        <span>new chat</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="chat-main-content">
+    <!-- header -->
+    <app-header #header [currentComponentInput]="currentComponent()" [defaultTitle]="'Chat'" />
+
+    <!-- router -->
+    <div>
+      <router-outlet class="router" (activate)="onActivate($event)" />
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

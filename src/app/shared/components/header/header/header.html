@@ -1,0 +1,13 @@
+<mat-toolbar>
+  <!-- @if (isMobileInput()) {
+    <button mat-icon-button (click)="toggleSidebar()">
+      <mat-icon svgIcon="search" />
+    </button>
+  } -->
+  <!-- header content -->
+  @if (currentComponentInput()?.headerContent?.()) {
+    <ng-container *ngTemplateOutlet="currentComponentInput()!.headerContent()" />
+  } @else {
+    <span>{{ defaultTitle() }}</span>
+  }
+</mat-toolbar>

@@ -2,6 +2,10 @@
   <div class="logo-container pointer">
     <mat-icon svgIcon="menu_logo" />
   </div>
-  <mat-icon svgIcon="search" class="icon-red pointer" />
+  <mat-icon svgIcon="search" class="icon-red pointer" (click)="onClickFeature('chat')" />
+  <mat-icon svgIcon="search" class="icon-blue pointer" (click)="onClickFeature('settings')" />
+  <mat-icon svgIcon="search" class="icon-green pointer" (click)="onClickFeature('ai-assistant')" />
 </div>
-<router-outlet />
+<div class="content-wrapper">
+  <router-outlet />
+</div>
