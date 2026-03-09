@@ -7,9 +7,11 @@ import {
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
+import { provideCustomIcons } from './core/configs/icon-config';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideCustomIcons,
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideRouter(routes),

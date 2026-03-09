@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    loadComponent: () => import('./features/home/home').then((m) => m.Home),
+    loadComponent: () => import('./shared/components/layout/layout').then((m) => m.Layout),
   },
   {
     path: 'flow-builder',
