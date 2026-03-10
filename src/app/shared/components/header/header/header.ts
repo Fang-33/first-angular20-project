@@ -28,7 +28,7 @@ export class Header {
   // ===== viewChild =====
 
   // ===== signal input =====
-  // isMobileInput = input.required<boolean>();
+  isMobileInput = input.required<boolean>();
   currentComponentInput = input<HeaderContentRef | null>(null);
   defaultTitle = input.required<string>();
 

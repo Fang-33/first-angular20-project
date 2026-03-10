@@ -1,6 +1,6 @@
 <mat-sidenav-container autosize="true">
   <!-- chat list -->
-  <mat-sidenav [opened]="isPanelOpen()" [mode]="sidenavMode()">
+  <mat-sidenav [opened]="isSidenavOpened()" [mode]="sidenavMode()">
     <mat-nav-list>
       <a class="chat-nav-link">
         <mat-icon svgIcon="search" />
@@ -27,10 +27,17 @@
 
   <mat-sidenav-content class="chat-main-content">
     <!-- header -->
-    <app-header #header [currentComponentInput]="currentComponent()" [defaultTitle]="'Chat'" />
+    <app-header
+      #header
+      [currentComponentInput]="currentComponent()"
+      [isMobileInput]="isMobile()"
+      [defaultTitle]="'Chat'"
+    />
 
     <!-- router -->
     <div>
+      <div>mode: {{ sidenavMode() }} | mobile: {{ isMobile() }}</div>
+
       <router-outlet class="router" (activate)="onActivate($event)" />
     </div>
   </mat-sidenav-content>

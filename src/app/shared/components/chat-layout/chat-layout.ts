@@ -5,14 +5,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterOutlet } from '@angular/router';
+import { isPanelOpenSignal } from '../../../core/store/sidenav.store';
 import { Header } from '../header/header/header';
 import { HeaderContentRef } from '../header/header/header.model';
-import { isPanelOpenSignal } from '../../../core/store/sidenav.store';
-import { HeaderDefault } from '../header/header-default/header-default';
 
 @Component({
   selector: 'app-chat-layout',
-  imports: [MatIconModule, RouterOutlet, MatSidenavModule, MatListModule, Header, HeaderDefault],
+  imports: [MatIconModule, RouterOutlet, MatSidenavModule, MatListModule, Header],
   templateUrl: './chat-layout.html',
   styleUrl: './chat-layout.scss',
 })
@@ -38,7 +37,10 @@ export class ChatLayout {
 
   // ===== signal computed =====
   isMobile = computed(() => this.responsiveObserver()?.matches ?? false);
-  isSidenavOpened = computed(() => !this.isMobile());
+  isSidenavOpened = computed(() => {
+    if (this.isMobile()) return false;
+    return isPanelOpenSignal();
+  });
   sidenavMode = computed(() => (this.isMobile() ? 'over' : 'side')); // 螢幕小於 800px 時，sidenav 切換成 over 模式並自動關閉
   isPanelOpen = isPanelOpenSignal;
   // ===== signal effect =====
