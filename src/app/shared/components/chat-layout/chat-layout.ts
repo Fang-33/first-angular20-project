@@ -5,7 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterOutlet } from '@angular/router';
-import { isPanelOpenSignal } from '../../../core/store/sidenav.store';
+import { isPanelOpenSignal, togglePanel } from '../../../core/store/sidenav.store';
 import { Header } from '../header/header/header';
 import { HeaderContentRef } from '../header/header/header.model';
 
@@ -30,19 +30,14 @@ export class ChatLayout {
   // ===== prop & const =====
 
   // ===== signal ======
-  responsiveObserver = toSignal(this.observer.observe(['(max-width: 800px)']));
-  isSidebarCollapsed = signal(false); // sidebar 收合（只剩 icon）
-  isSubNodeCollapsed = signal(true); // sub-sections 展開收合
+  responsiveObserver = toSignal(this.observer.observe(['(max-width: 768px)']));
   currentComponent = signal<HeaderContentRef | null>(null);
+  isSidenavOpened = isPanelOpenSignal;
 
   // ===== signal computed =====
   isMobile = computed(() => this.responsiveObserver()?.matches ?? false);
-  isSidenavOpened = computed(() => {
-    if (this.isMobile()) return false;
-    return isPanelOpenSignal();
-  });
   sidenavMode = computed(() => (this.isMobile() ? 'over' : 'side')); // 螢幕小於 800px 時，sidenav 切換成 over 模式並自動關閉
-  isPanelOpen = isPanelOpenSignal;
+
   // ===== signal effect =====
 
   // ===== lifecycle hooks =====
@@ -50,9 +45,12 @@ export class ChatLayout {
   // ===== initialization =====
 
   // ===== catch event =====
-
   onActivate(component: HeaderContentRef | null) {
     this.currentComponent.set(component);
+  }
+
+  toggleSidebar() {
+    togglePanel();
   }
 
   // ===== catch event functions =====
